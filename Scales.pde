@@ -3,7 +3,7 @@ boolean shift = true;
 void setup() {
   size(500, 500);  //feel free to change the size
   //noLoop(); //stops the draw() function from repeating
-  frameRate(3);
+  frameRate(2);
 }
 void scale(int x, int y) {
   fill(0,0,255);
