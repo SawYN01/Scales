@@ -3,6 +3,7 @@ boolean shift = true;
 void setup() {
   size(500, 500);  //feel free to change the size
   noLoop(); //stops the draw() function from repeating
+  //frameRate(4);
 }
 void scale(int x, int y) {
   fill(0,0,255);
@@ -12,12 +13,19 @@ void scale(int x, int y) {
 }
 
 void draw() {
+  //color blue fill (0,51,102)
+ 
 for(int y = 10; y < 550; y+=20)
   {
     for(int x =-40; x< 500; x+=100)
     {
       if (shift == true) {
-        fill(0,51,102);
+        //fill((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
+         
+        int r = 0 + (int)(Math.random()*40);
+        int g = 51 + (int)(Math.random()*40);
+        int b = 102 + (int)(Math.random()*40);
+        fill(r,g,b);
         stroke(255,255,255);
         strokeWeight(2);
         //bezier(100,105,110,40,190,40,200,105);
@@ -27,7 +35,11 @@ for(int y = 10; y < 550; y+=20)
         bezier(x+15,y,x+25,y-45,x+75,y-45,x+85,y);
         bezier(x+30,y,x+40,y-25,x+60,y-25,x+70,y);
       } else {
-        fill(0,51,102);
+        //fill((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
+        int r = 0 + (int)(Math.random()*40);
+        int g = 51 + (int)(Math.random()*40);
+        int b = 102 + (int)(Math.random()*40);
+        fill(r,g,b);
         stroke(255,255,255);
         strokeWeight(2);
         bezier(x+50,y,x+60,y-65,x+140,y-65,x+150,y);
@@ -41,3 +53,4 @@ for(int y = 10; y < 550; y+=20)
       shift = true;
   }    
 }  
+    
